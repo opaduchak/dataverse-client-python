@@ -1,7 +1,6 @@
-from __future__ import absolute_import
-
 import os
 
+from bleach.css_sanitizer import CSSSanitizer
 from lxml import etree
 import bleach
 
@@ -99,4 +98,4 @@ def get_files_in_path(path):
 
 
 def sanitize(value):
-    return bleach.clean(value, strip=True, tags=[], attributes=[], styles=[])
+    return bleach.clean(value, strip=True, tags=[], attributes=[], css_sanitizer=CSSSanitizer(allowed_css_properties=[], allowed_svg_properties=[]))

@@ -4,9 +4,11 @@ import unittest
 
 
 REQUIRES = [
-    'bleach>=1.2.2',
+    'tinycss>=1.2.1'
+    'bleach>=6.1.0',
     'requests>=2.2.1',
     'lxml>=3.2.5',
+    'urllib3>=2.2.1'
 ]
 
 TESTS_REQUIRE = [
