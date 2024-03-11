@@ -98,4 +98,4 @@ def get_files_in_path(path):
 
 
 def sanitize(value):
-    return bleach.clean(value, strip=True, tags=[], attributes=[], css_sanitizer=CSSSanitizer(allowed_css_properties=[], allowed_svg_properties=[]))
+    return bleach.clean(value, strip=True, tags=set(), attributes=[], css_sanitizer=CSSSanitizer(allowed_css_properties=[], allowed_svg_properties=[]))
